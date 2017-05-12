@@ -1,6 +1,7 @@
 package stringutil
 
 import "testing"
+import "time"
 
 func TestReverse(t *testing.T) {
 	cases := []struct {
@@ -16,5 +17,6 @@ func TestReverse(t *testing.T) {
 		if got != c.want {
 			t.Errorf("Reverse(%q) == %q, want %q", c.in, got, c.want)
 		}
+		time.Sleep(time.Second)
 	}
 }
